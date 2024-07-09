@@ -19,6 +19,11 @@ export const configSchema = {
             disableBeacon: true,
           },
           {
+            target: '[aria-label="hh"]',
+            content: 'This is the OpenMRS logo. Click here to go back to the home page.',
+            disableBeacon: true,
+          },
+          {
             target: '[aria-label="Left navigation"]',
             content: 'This is the side bar.',
             disableBeacon: true,

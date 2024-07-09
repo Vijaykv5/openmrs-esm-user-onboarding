@@ -15,7 +15,7 @@ export const OnboardingProvider = ({ children }) => {
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
 
   const startOnboarding = (newSteps) => {
-    console.log(newSteps);
+    console.log(newSteps.length);
     setSteps(newSteps);
     setCurrentStepIndex(0);
     setRunJoyride(true);

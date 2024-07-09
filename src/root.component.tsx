@@ -25,9 +25,9 @@ const handleJoyrideCallback = (data: CallBackProps) => {
     <ReactJoyride
       steps={steps}
       run={runJoyride}
-      stepIndex={currentStepIndex}
+      // stepIndex={currentStepIndex}
       continuous={true}
-      callback={handleJoyrideCallback}
+      // callback={handleJoyrideCallback}
       showSkipButton={true}
       showProgress={true}
     />
