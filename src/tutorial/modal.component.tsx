@@ -10,6 +10,7 @@ const TutorialModal = ({ open, onClose }) => {
   const { t } = useTranslation();
   const config = useConfig();
   const tutorials = config.tutorialData;
+  const showTutorial = config.showTutorial;
   const tutorialContext = useAppContext<TutorialContext>('tutorial-context');
 
   const handleWalkthroughClick = (index: number) => {
@@ -20,7 +21,7 @@ const TutorialModal = ({ open, onClose }) => {
 
     const setTutorialSteps = () => {
       tutorialContext.setSteps(tutorial.steps);
-      tutorialContext.setShowTutorial(true);
+      tutorialContext.setShowTutorial(showTutorial);
     };
 
     if (currentPath === homePath) {

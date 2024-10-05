@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactJoyride, { ACTIONS, type CallBackProps, EVENTS, type Step } from 'react-joyride';
-import { useDefineAppContext } from '@openmrs/esm-framework';
+import { useDefineAppContext, useConfig } from '@openmrs/esm-framework';
 import { type TutorialContext } from './types';
 import CustomTooltip from './tooltip/tooltip.component';
+import { type Config } from './config-schema';
 
 const RootComponent: React.FC = () => {
 
-  const [showTutorial, setShowTutorial] = React.useState(false);
+  const config = useConfig() as Config;
+  const [showTutorial, setShowTutorial] = React.useState(config?.showTutorial);  
   const [steps, setSteps] = React.useState<Step[]>([]);
   const [stepIndex, setStepIndex] = React.useState(0);
 
